@@ -1,0 +1,12 @@
+<Connections>
+  <Definitions>
+    <Definition>
+      <Description />
+      <ConnectionString>SQLite.NET?Server=localhost;Database=C:\Users\Public\Documents\RemObjects Samples\Database\PCTrade.sqlite.db;</ConnectionString>
+      <ConnectionType>SQLite</ConnectionType>
+      <Default>True</Default>
+      <Name>PCTrade-SQLite</Name>
+    </Definition>
+  </Definitions>
+  <FileFormat>Xml</FileFormat>
+</Connections>

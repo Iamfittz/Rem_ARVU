@@ -1,0 +1,796 @@
+{
+  "DataTables": [
+    {
+      "Name": "Agents",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeInt",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Type",
+          "DataType": "LargeInt",
+          "Required": true
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Company",
+          "DataType": "WideString",
+          "Size": 50
+        },
+        {
+          "Name": "Role",
+          "DataType": "LargeInt",
+          "Required": true
+        },
+        {
+          "Name": "Email",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Password",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 20
+        },
+        {
+          "Name": "Discount",
+          "DataType": "Float"
+        },
+        {
+          "Name": "Birthdate",
+          "DataType": "DateTime"
+        },
+        {
+          "Name": "Address",
+          "DataType": "WideString",
+          "Size": 255
+        },
+        {
+          "Name": "PostalCode",
+          "DataType": "WideString",
+          "Size": 10
+        },
+        {
+          "Name": "Country",
+          "DataType": "WideString",
+          "Size": 50
+        },
+        {
+          "Name": "Phone",
+          "DataType": "WideString",
+          "Size": 50
+        },
+        {
+          "Name": "Photo",
+          "DataType": "Blob"
+        },
+        {
+          "Name": "Notes",
+          "DataType": "WideMemo"
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "Agents",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Type",
+              "TableField": "Type"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "Company",
+              "TableField": "Company"
+            },
+            {
+              "DataTableField": "Role",
+              "TableField": "Role"
+            },
+            {
+              "DataTableField": "Email",
+              "TableField": "Email"
+            },
+            {
+              "DataTableField": "Password",
+              "TableField": "Password"
+            },
+            {
+              "DataTableField": "Discount",
+              "TableField": "Discount"
+            },
+            {
+              "DataTableField": "Birthdate",
+              "TableField": "Birthdate"
+            },
+            {
+              "DataTableField": "Address",
+              "TableField": "Address"
+            },
+            {
+              "DataTableField": "PostalCode",
+              "TableField": "PostalCode"
+            },
+            {
+              "DataTableField": "Country",
+              "TableField": "Country"
+            },
+            {
+              "DataTableField": "Phone",
+              "TableField": "Phone"
+            },
+            {
+              "DataTableField": "Photo",
+              "TableField": "Photo"
+            },
+            {
+              "DataTableField": "Notes",
+              "TableField": "Notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "History",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "OrderId",
+          "DataType": "LargeInt",
+          "Required": true
+        },
+        {
+          "Name": "UpdatedBy",
+          "DataType": "LargeInt",
+          "Required": true
+        },
+        {
+          "Name": "UpdateDate",
+          "DataType": "DateTime",
+          "Required": true
+        },
+        {
+          "Name": "Details",
+          "DataType": "WideMemo",
+          "Required": true
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "History",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "OrderId",
+              "TableField": "OrderId"
+            },
+            {
+              "DataTableField": "UpdatedBy",
+              "TableField": "UpdatedBy"
+            },
+            {
+              "DataTableField": "UpdateDate",
+              "TableField": "UpdateDate"
+            },
+            {
+              "DataTableField": "Details",
+              "TableField": "Details"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "OrderDetails",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Order",
+          "DataType": "Integer",
+          "Required": true
+        },
+        {
+          "Name": "Product",
+          "DataType": "Integer",
+          "Required": true
+        },
+        {
+          "Name": "Amount",
+          "DataType": "Integer",
+          "Required": true
+        },
+        {
+          "Name": "Price",
+          "DataType": "Float",
+          "Required": true
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "OrderDetails",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Order",
+              "TableField": "Order"
+            },
+            {
+              "DataTableField": "Product",
+              "TableField": "Product"
+            },
+            {
+              "DataTableField": "Amount",
+              "TableField": "Amount"
+            },
+            {
+              "DataTableField": "Price",
+              "TableField": "Price"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "OrderStatus",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "SmallInt",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Remarks",
+          "DataType": "WideString",
+          "Size": 100
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "OrderStatus",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "Remarks",
+              "TableField": "Remarks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "OrderType",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "SmallInt",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Remarks",
+          "DataType": "WideString",
+          "Size": 100
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "OrderType",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "Remarks",
+              "TableField": "Remarks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Orders",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Date",
+          "DataType": "DateTime"
+        },
+        {
+          "Name": "Status",
+          "DataType": "SmallInt"
+        },
+        {
+          "Name": "Type",
+          "DataType": "SmallInt"
+        },
+        {
+          "Name": "Contractor",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "Manager",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "CreatedBy",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "CreateDate",
+          "DataType": "DateTime"
+        },
+        {
+          "Name": "UpdatedBy",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "UpdateDate",
+          "DataType": "DateTime"
+        },
+        {
+          "Name": "HistoryId",
+          "DataType": "LargeInt"
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "Orders",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Date",
+              "TableField": "Date"
+            },
+            {
+              "DataTableField": "Status",
+              "TableField": "Status"
+            },
+            {
+              "DataTableField": "Type",
+              "TableField": "Type"
+            },
+            {
+              "DataTableField": "Contractor",
+              "TableField": "Contractor"
+            },
+            {
+              "DataTableField": "Manager",
+              "TableField": "Manager"
+            },
+            {
+              "DataTableField": "CreatedBy",
+              "TableField": "CreatedBy"
+            },
+            {
+              "DataTableField": "CreateDate",
+              "TableField": "CreateDate"
+            },
+            {
+              "DataTableField": "UpdatedBy",
+              "TableField": "UpdatedBy"
+            },
+            {
+              "DataTableField": "UpdateDate",
+              "TableField": "UpdateDate"
+            },
+            {
+              "DataTableField": "HistoryId",
+              "TableField": "HistoryId"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "PriceList",
+      "Fields": [
+        {
+          "Name": "Product",
+          "DataType": "Integer",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "StartDate",
+          "DataType": "DateTime",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Price",
+          "DataType": "Float",
+          "Required": true
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "PriceList",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Product",
+              "TableField": "Product"
+            },
+            {
+              "DataTableField": "StartDate",
+              "TableField": "StartDate"
+            },
+            {
+              "DataTableField": "Price",
+              "TableField": "Price"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ProductGroups",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Parent",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "ProductGroups",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Parent",
+              "TableField": "Parent"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Products",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Code",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 255
+        },
+        {
+          "Name": "Details",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 255
+        },
+        {
+          "Name": "URL",
+          "DataType": "WideString",
+          "Size": 225
+        },
+        {
+          "Name": "Warranty",
+          "DataType": "SmallInt"
+        },
+        {
+          "Name": "Obsolete",
+          "DataType": "Boolean",
+          "Required": true
+        },
+        {
+          "Name": "Notes",
+          "DataType": "WideMemo"
+        },
+        {
+          "Name": "Vendor",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "Group",
+          "DataType": "Integer",
+          "Required": true
+        },
+        {
+          "Name": "MinAmount",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "MaxAmount",
+          "DataType": "Integer"
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "Products",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Code",
+              "TableField": "Code"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "Details",
+              "TableField": "Details"
+            },
+            {
+              "DataTableField": "URL",
+              "TableField": "URL"
+            },
+            {
+              "DataTableField": "Warranty",
+              "TableField": "Warranty"
+            },
+            {
+              "DataTableField": "Obsolete",
+              "TableField": "Obsolete"
+            },
+            {
+              "DataTableField": "Notes",
+              "TableField": "Notes"
+            },
+            {
+              "DataTableField": "Vendor",
+              "TableField": "Vendor"
+            },
+            {
+              "DataTableField": "Group",
+              "TableField": "Group"
+            },
+            {
+              "DataTableField": "MinAmount",
+              "TableField": "MinAmount"
+            },
+            {
+              "DataTableField": "MaxAmount",
+              "TableField": "MaxAmount"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Roles",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "Integer",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "CanManageOrderTypes",
+          "DataType": "Integer"
+        },
+        {
+          "Name": "CanManagePrices",
+          "DataType": "Boolean"
+        },
+        {
+          "Name": "CanManageClients",
+          "DataType": "Boolean"
+        },
+        {
+          "Name": "CanManageProviders",
+          "DataType": "Boolean"
+        },
+        {
+          "Name": "CanSeeReports",
+          "DataType": "Boolean"
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "Roles",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "CanManageOrderTypes",
+              "TableField": "CanManageOrderTypes"
+            },
+            {
+              "DataTableField": "CanManagePrices",
+              "TableField": "CanManagePrices"
+            },
+            {
+              "DataTableField": "CanManageClients",
+              "TableField": "CanManageClients"
+            },
+            {
+              "DataTableField": "CanManageProviders",
+              "TableField": "CanManageProviders"
+            },
+            {
+              "DataTableField": "CanSeeReports",
+              "TableField": "CanSeeReports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Vendors",
+      "Fields": [
+        {
+          "Name": "Id",
+          "DataType": "LargeAutoInc",
+          "InPrimaryKey": true,
+          "Required": true
+        },
+        {
+          "Name": "Code",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 50
+        },
+        {
+          "Name": "Name",
+          "DataType": "WideString",
+          "Required": true,
+          "Size": 120
+        },
+        {
+          "Name": "VendorSite",
+          "DataType": "WideString",
+          "Size": 255
+        }
+      ],
+      "Statements": [
+        {
+          "ConnectionType": "SQLite",
+          "StatementType": "AutoSQL",
+          "TargetTable": "Vendors",
+          "ColumnMappings": [
+            {
+              "DataTableField": "Id",
+              "TableField": "Id"
+            },
+            {
+              "DataTableField": "Code",
+              "TableField": "Code"
+            },
+            {
+              "DataTableField": "Name",
+              "TableField": "Name"
+            },
+            {
+              "DataTableField": "VendorSite",
+              "TableField": "VendorSite"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

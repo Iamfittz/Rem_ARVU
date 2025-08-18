@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RemoteSchema>
+  <Server>
+    <Name>Data Abstract server</Name>
+    <ServerUri>http://localhost:8099/bin</ServerUri>
+  </Server>
+  <DataService>DataService</DataService>
+  <LoginService>LoginService</LoginService>
+  <DataLogin />
+</RemoteSchema>

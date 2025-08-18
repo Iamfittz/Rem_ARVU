@@ -1,0 +1,69 @@
+<Window x:Class="Rem_ARVU.LogOnForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Rem_ARVU"
+		Title="Data Abstract Server Login"
+        Height="147" Width="400"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow"
+        ShowInTaskbar="False"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:LogOnForm.AcceptCredentials}"
+                        CanExecute="AcceptCredentials_CanExecute"
+                        Executed="AcceptCredentials_Executed" />
+    </Window.CommandBindings>
+    <StackPanel Orientation="Vertical">
+        <Grid Margin="8 8 8 8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0"
+                       VerticalAlignment="Center"
+                       Margin="0 0 0 2">
+                User Name:
+            </TextBlock>
+            <TextBox Grid.Row="0" Grid.Column="1"
+                     Margin="0 0 0 2"
+                     Text="{Binding UserId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0"
+                       VerticalAlignment="Center"
+                       Margin="0 0 0 2">
+                Password:
+            </TextBlock>
+            <PasswordBox Grid.Row="1" Grid.Column="1"
+                         Name="PasswordTextBox"
+                         Margin="0 0 0 2" />
+
+            <CheckBox Grid.Row="2" Grid.Column="1"
+                      Height="16" Margin="0 0 0 2"
+                      VerticalAlignment="Center"
+                      IsChecked="{Binding DoStorePassword}">
+                Save password
+            </CheckBox>
+        </Grid>
+
+        <DockPanel Grid.Row="2" Grid.Column="1"
+                   Margin="8 0 8 8"
+                   LastChildFill="False">
+            <Button DockPanel.Dock="Right"
+                    Width="75" Margin="8 0 0 0"
+                    IsDefault="True"
+                    Command="{x:Static local:LogOnForm.AcceptCredentials}">
+                OK
+            </Button>
+            <Button DockPanel.Dock="Right"
+                    Width="75" Margin="8 0 0 0" IsCancel="True">
+                Cancel
+            </Button>
+        </DockPanel>
+    </StackPanel>
+</Window>

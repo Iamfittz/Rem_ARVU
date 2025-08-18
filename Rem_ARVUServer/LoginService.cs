@@ -40,7 +40,7 @@ namespace Rem_ARVU
 			return true;
 		}
 
-		[ServiceMethod]
+        [ServiceMethod]
 		public override void Logout()
 		{
 			// Perform actions needed for user logout

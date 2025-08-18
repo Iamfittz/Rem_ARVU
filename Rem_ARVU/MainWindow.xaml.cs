@@ -117,7 +117,7 @@ namespace Rem_ARVU
         }
 
         private void ExecuteUpdateProduct() {
-            if (SelectedProductGroup != null) {
+            if (SelectedProduct != null) {
                 var form = new ProductForm(fDataModule, (Products)SelectedProduct.Clone(), isNew: false);
                 if (form.ShowDialog() == true) {
                     RefreshProducts();

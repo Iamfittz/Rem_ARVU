@@ -3,14 +3,14 @@
 ## Overview
 A client-server application demonstrating RemObjects Data Abstract capabilities with SQLite database.
 
-### Prerequisites
+## Prerequisites
 - Install RemObjects Data Abstract
 - Download trial version: https://www.remobjects.com/da/download.aspx
 - Run the DataAbstract.exe installer
 - Then follow the wizard installation
 - Activate the trial license (30 days)
 
-### Running the Application
+## Running the Application
 1. Clone the repository
 2. Open `Rem_ARVU.sln` in Visual Studio
 3. Build the solution

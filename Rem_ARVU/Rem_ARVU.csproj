@@ -101,6 +101,9 @@
     <Compile Include="EditForms\ProductGroupForm.xaml.cs">
       <DependentUpon>ProductGroupForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditForms\VendorForm.xaml.cs">
+      <DependentUpon>VendorForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LogOnForm.xaml.cs">
       <DependentUpon>LogOnForm.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Services\ProductFilter.cs" />
     <Compile Include="TableDefinitions_Rem_ARVUDataset.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditForms\ProductGroupForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditForms\VendorForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

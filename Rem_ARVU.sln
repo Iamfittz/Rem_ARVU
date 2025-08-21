@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rem_ARVU", "Rem_ARVU\Rem_AR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rem_ARVUServer", "Rem_ARVUServer\Rem_ARVUServer.csproj", "{CE2E41D6-BC3B-44C6-AEA1-E343A50EC3F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rem_ARVUTests", "Rem_ARVUTests\Rem_ARVUTests.csproj", "{29D5DCAE-A787-46D2-A44F-18CE6B339EB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rem_ARVU.Utils", "Rem_ARVU.Utils\Rem_ARVU.Utils.csproj", "{DE5773B8-D268-4CDA-92CD-CEC2E73C277E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{CE2E41D6-BC3B-44C6-AEA1-E343A50EC3F3}.Debug|x86.Build.0 = Debug|Any CPU
 		{CE2E41D6-BC3B-44C6-AEA1-E343A50EC3F3}.Release|x86.ActiveCfg = Release|Any CPU
 		{CE2E41D6-BC3B-44C6-AEA1-E343A50EC3F3}.Release|x86.Build.0 = Release|Any CPU
-		{29D5DCAE-A787-46D2-A44F-18CE6B339EB0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{29D5DCAE-A787-46D2-A44F-18CE6B339EB0}.Debug|x86.Build.0 = Debug|Any CPU
-		{29D5DCAE-A787-46D2-A44F-18CE6B339EB0}.Release|x86.ActiveCfg = Release|Any CPU
-		{29D5DCAE-A787-46D2-A44F-18CE6B339EB0}.Release|x86.Build.0 = Release|Any CPU
+		{DE5773B8-D268-4CDA-92CD-CEC2E73C277E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE5773B8-D268-4CDA-92CD-CEC2E73C277E}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE5773B8-D268-4CDA-92CD-CEC2E73C277E}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE5773B8-D268-4CDA-92CD-CEC2E73C277E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

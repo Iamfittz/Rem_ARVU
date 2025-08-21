@@ -110,6 +110,7 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,10 +122,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\ProductFilter.cs" />
     <Compile Include="TableDefinitions_Rem_ARVUDataset.cs" />
+    <Compile Include="ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="EditForms\ProductForm.xaml">

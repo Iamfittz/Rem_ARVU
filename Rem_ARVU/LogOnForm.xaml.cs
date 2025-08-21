@@ -8,11 +8,9 @@ namespace Rem_ARVU {
         #region Constructor
         public LogOnForm() {
             this.InitializeComponent();
-
-            this.UserId = Properties.Settings.Default.UserId;
-            this.SetPassword(Properties.Settings.Default.Password);
-
-            this.DoStorePassword = Properties.Settings.Default.StorePassword;
+            //this.UserId = Properties.Settings.Default.UserId;
+            //this.SetPassword(Properties.Settings.Default.Password);
+            this.DoStorePassword = false;
         }
         #endregion
 
